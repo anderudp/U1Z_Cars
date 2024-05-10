@@ -189,6 +189,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c935558ea4ee63746a5a53b50804994b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 291258315}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c935558ea4ee63746a5a53b50804994b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1466747517}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: c935558ea4ee63746a5a53b50804994b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 291258314}
@@ -387,7 +390,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291258310}
   serializedVersion: 4
-  m_Mass: 750
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -404,7 +407,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &324314241
 GameObject:
@@ -948,6 +951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1306949998}
+  - component: {fileID: 1306949999}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -970,6 +974,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1306949999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306949997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc07977cb7f613e33a01454647d997d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 1746557057}
+  bestTimeText: {fileID: 373913292}
+--- !u!114 &1466747517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291258310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832e639e9085c8c989032c12a90a1d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheels:
+  - {fileID: 291258308}
+  - {fileID: 291258307}
+  - {fileID: 291258306}
+  - {fileID: 291258305}
+  fourWheelDrive: 1
+  maxMotorTorque: 600
+  maxSteeringAngle: 17
+  maxBrakeTorque: 3600
 --- !u!1 &1583126865
 GameObject:
   m_ObjectHideFlags: 0
